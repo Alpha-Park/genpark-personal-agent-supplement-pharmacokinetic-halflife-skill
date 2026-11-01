@@ -1,0 +1,24 @@
+{
+  "name": "genpark-personal-agent-supplement-pharmacokinetic-halflife-skill",
+  "version": "1.0.0",
+  "description": "Models supplement plasma concentration decay, elimination half-lives, DMT1 competitive transporter conflicts, and chronobiological ingestion schedules.",
+  "tools": [
+    {
+      "name": "model_compound_clearance_curve",
+      "description": "Calculates active plasma level, clearance percentage, and hours to 95% elimination.",
+      "parameters": {
+        "compound_name": "string (default 'caffeine')",
+        "dose_mg": "float (default 200.0)",
+        "time_elapsed_hours": "float (default 6.0)",
+        "custom_half_life_hours": "float (optional)"
+      }
+    },
+    {
+      "name": "evaluate_supplement_stack_interactions",
+      "description": "Screens supplement stack for competitive transporter competition and neurochemical antagonism.",
+      "parameters": {
+        "supplements_taken_json": "string (JSON array of supplement objects)"
+      }
+    }
+  ]
+}
